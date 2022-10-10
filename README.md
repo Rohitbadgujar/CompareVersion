@@ -25,7 +25,7 @@ Here is an example of version numbers ordering: 0.1 < 1.1 < 1.2 < 1.2.9.9.9.9 < 
 ![image](https://user-images.githubusercontent.com/23581624/194958776-e3009609-ab0e-4ab3-bcb9-d3ab199e66c9.png)
 
 
-## Running the application
+## Running the Unit Test
 ### Go to the directory
 
 #### ``cd CompareVersionTest``
