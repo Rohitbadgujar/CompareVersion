@@ -1,38 +1,37 @@
-﻿namespace VC
+﻿using System.Text.RegularExpressions;
+namespace VC
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            decimal value;
+            var regex = @"[0-9]+(\.[0-9]+)*";
+            Regex rg = new Regex(regex);
             do
             {
 
                 string version1, version2;
-                do
-                {
-                    Console.Write("Enter Version 1: ");
-                    version1 = Console.ReadLine();
-                } while (Decimal.TryParse(version1, out value) == false);
+                Console.Write("Enter Version 1: ");
+                version1 = Console.ReadLine();
 
-                do
-                {
-                    Console.Write("Enter Version 2: ");
-                    version2 = Console.ReadLine();
-                } while (Decimal.TryParse(version2, out value) == false);
+                Console.Write("Enter Version 2: ");
+                version2 = Console.ReadLine();
+
 
                 int res = CompareVersion(version1, version2);
                 if (res == 1)
                 {
                     Console.WriteLine("{0} > {1}", version1, version2);
+                    Console.WriteLine("returned: {0}", res);
                 }
                 else if (res == -1)
                 {
                     Console.WriteLine("{0} < {1}", version1, version2);
+                    Console.WriteLine("returned: {0}", res);
                 }
                 else
                 {
-                    Console.WriteLine("0");
+                    Console.WriteLine("returned: {0}", res);
                 }
 
                 Console.Write("Exit Yes/No, enter y for yes and n for no : ");
